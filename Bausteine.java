@@ -6,6 +6,7 @@
  * @version (a version number or a date)
  */
 public class Bausteine
+//Servus
 {
 private Bausteine(){
 }
