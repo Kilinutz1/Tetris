@@ -70,8 +70,6 @@ class QUADER
         // mit (new Color (200, 0, 0)) können alle rgb-Farben adressiert werden.
         switch (neueFarbe) {
             case "black": farbe = Color.black; break;
-            //weitere Farben!
-            default: farbe = Color.black;
             case "violett": farbe = Color.magenta; break;
             case "gruen": farbe = Color.green; break;
             case "pink": farbe = Color.pink; break;
@@ -79,6 +77,7 @@ class QUADER
             case "gelb": farbe = Color.yellow; break;
             case "orange": farbe = Color.orange; break;
             case "rot": farbe = Color.red; break;
+            default: farbe = Color.black;
         }
         zeichne();
     }
