@@ -101,10 +101,10 @@ class QUADER
      * @param x x-Position
      * @param y y-Position
      */
-    void PositionSetzen (int x, int y)
+    void PositionSetzen (int x1, int y1)
     {
-        this. x = x;
-        this. y = y;
+        this. x = x1;
+        this. y = y1;
         zeichne();
     }
 
