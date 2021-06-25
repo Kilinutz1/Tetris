@@ -9,7 +9,7 @@ public class Bausteine
 //Servus21
 //JFBumerangsfdsdfafd
 {
-private Bausteine(){
+public Bausteine(){
 }
 public void Baustein1(){
 
