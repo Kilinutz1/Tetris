@@ -3,6 +3,9 @@ import java.awt.*;
 import java. awt. geom. *;
 import javax. swing. *;
 
+
+//Goldene Banane
+//Verschimmelt
 /**
  * Das Symbol eines Blockquaders.
  * Das Fenster wird bei Bedarf generiert.
