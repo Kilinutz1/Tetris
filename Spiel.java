@@ -1,10 +1,5 @@
 
 //Affe
-
-
-
-
-
 //Test 
 //Hallo ihr Lappen
 
