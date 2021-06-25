@@ -4,7 +4,15 @@ public class HERO extends Bausteine
    
     public HERO(){  
      einsx =12;
-     einsx =12;
+     einsy =2;
+     zweix =13;
+     zweiy =2;
+     dreix =14;
+     dreiy =2;
+     vierx =15;
+     viery = 2;
+     farbe= "blau";
+     Ausrichtung ='n';
     }
     @Override
     public void drehen(){
