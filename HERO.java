@@ -1,7 +1,7 @@
 public class HERO extends Bausteine
 {
     public HERO(){
-        
+    x1= new QUADER;    
     }
     @Override
     public void drehen(){
