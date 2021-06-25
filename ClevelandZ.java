@@ -1,33 +1,22 @@
 
-/**
- * Write a description of class ClevelandZ here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class ClevelandZ
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class ClevelandZ
-     */
-    public ClevelandZ()
-    {
-        // initialise instance variables
-        x = 0;
+public class ClevelandZ extends Bausteine{
+    public ClevelandZ(){
+        
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void drehen(){
+
+    }
+
+    public void herunterfallen(){
+
+    }
+
+    public void seitlichbewegen(){
+
+    }
+
+    public void aufkommen(){
     }
 }
+// Ihr seid dumm 
