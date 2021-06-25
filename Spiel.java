@@ -18,7 +18,7 @@ public class Spiel extends SIMULATION
      */
     public Spiel()
     {
-        rand = new RANDSYMBOL(10,15);
+        rand = new RANDSYMBOL(10,20);
     }
 
     
