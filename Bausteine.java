@@ -10,8 +10,18 @@ public class Bausteine
 //JFBumerangsfdsdfafd
 {
 public Bausteine(){
+    
 }
-public void Baustein1(){
+public void drehen(){
 
 }
+public void herunterfallen(){
+    
+}
+public void seitlichbewegen(){
+    
+}
+public void aufkommen(){
+}
+
 }
