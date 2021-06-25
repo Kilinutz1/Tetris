@@ -1,14 +1,14 @@
 public class HERO extends Bausteine
 {
-    QUADER x1;
-    QUADER x2;
-    QUADER x3;
-    QUADER x4;
+    QUADER ll;
+    QUADER l;
+    QUADER r;
+    QUADER rr;
     public HERO(){  
-     x1 = new QUADER(1,1,"blau"); 
-     x2 = new QUADER(2,1,"blau");
-     x3 = new QUADER(3,1,"blau");
-     x4 = new QUADER(4,1,"blau");
+     ll = new QUADER(12,2,"blau"); 
+     l = new QUADER(13,2,"blau");
+     r = new QUADER(14,2,"blau");
+     rr = new QUADER(15,2,"blau");
     }
     @Override
     public void drehen(){
