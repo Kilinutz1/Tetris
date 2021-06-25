@@ -3,6 +3,8 @@ public class HERO extends Bausteine
 {
    
     public HERO(){  
+     Bausteine HERO;
+     HERO = new Bausteine();
      einsx =12;
      einsy =2;
      zweix =13;
