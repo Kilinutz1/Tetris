@@ -19,7 +19,7 @@ class QUADER
     private int groesse; 
 
     /** Interna */
-    private int x;
+    private int x;  
     private int y;
     private JComponent anzeige;
     private Color farbe;
