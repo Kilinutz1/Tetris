@@ -3,7 +3,6 @@ import java.awt.*;
 import java. awt. geom. *;
 import javax. swing. *;
 
-
 //Goldene Banane
 //Verschimmelt
 /**
@@ -17,7 +16,7 @@ class QUADER
 {
     /** Das Anzeigefenster. */
     private OBERFLAECHE fenster;
-    
+
     /** Anzeigegröße für das Quaderelement */
     private int groesse; 
 
@@ -63,7 +62,7 @@ class QUADER
         fenster.frameGeben(). add (anzeige, 0);
         farbeSetzen(neueFarbe);
     }
-    
+
     /**
      * TODO
      * Die Farbe soll nach einer Eingabe (z.B. String) geändert werden.
@@ -128,7 +127,7 @@ class QUADER
     {
         return y;
     }
-    
+
     /**
      * Entfernt das Quaderelement aus der Anzeige
      */
