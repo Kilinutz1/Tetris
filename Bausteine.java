@@ -27,7 +27,10 @@ public class Bausteine{
     }
 
     public void herunterfallen(){
-    eins.PositionSetzen(_x1_, _y1_)
+    eins.PositionSetzen(einsx, einsy+1);
+    zwei.PositionSetzen(zweix, zweiy+1);
+    drei.PositionSetzen(dreix, dreiy+1);
+    vier.PositionSetzen(vierx, viery+1);
     }
 
     public void seitlichbewegen(){
