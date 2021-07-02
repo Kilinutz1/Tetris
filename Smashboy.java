@@ -24,15 +24,12 @@ public class Smashboy extends Bausteine
     }
     @Override
     public void drehen(){
-        
+        //braucht nix
     }
     
+    
     @Override
-    public void seitlichbewegen(){
-        
-    }
-    @Override
-    public void aufkommen(){
+     public void aufkommen(){
         
     }
 }

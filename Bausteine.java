@@ -38,10 +38,28 @@ public class Bausteine{
         viery = viery +1;
     }
 
-    public void seitlichbewegen(){
-
+    public void rechtsbewegen(){
+        eins.PositionSetzen(einsx+1, einsy);
+        zwei.PositionSetzen(zweix+1, zweiy);
+        drei.PositionSetzen(dreix+1, dreiy);
+        vier.PositionSetzen(vierx+1, viery);
+        zeichnen();
+        einsx = einsx +1;
+        zweix = zweix +1;
+        dreix = dreix +1;
+        vierx = vierx +1; 
     }
-
+    public void linksbewegen(){
+        eins.PositionSetzen(einsx-1, einsy);
+        zwei.PositionSetzen(zweix-1, zweiy);
+        drei.PositionSetzen(dreix-1, dreiy);
+        vier.PositionSetzen(vierx-1, viery);
+        zeichnen();
+        einsx = einsx -1;
+        zweix = zweix -1;
+        dreix = dreix -1;
+        vierx = vierx -1;
+    }
     public void aufkommen(){
     }
 

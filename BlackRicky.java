@@ -27,10 +27,7 @@ public class BlackRicky extends Bausteine
         
     }
     
-    @Override
-    public void seitlichbewegen(){
-        
-    }
+    
     @Override
     public void aufkommen(){
         

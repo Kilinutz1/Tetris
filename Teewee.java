@@ -71,7 +71,7 @@ public class Teewee extends Bausteine
     
     }
     else if (Ausrichtung == 'w'){
-    eins.PositionSetzen(einsx-1,einsy-1);
+     eins.PositionSetzen(einsx-1,einsy-1);
      zwei.PositionSetzen(zweix ,zweiy);
      drei.PositionSetzen(dreix+1,dreiy-1);
      vier.PositionSetzen(vierx+1,viery+1);
@@ -79,19 +79,16 @@ public class Teewee extends Bausteine
      einsy = einsy-1;
      zweix =zweix ;
      zweiy =zweiy;
-     dreix =dreix-1;
-     dreiy =dreiy+1;
-     vierx =vierx-1;
-     viery = viery-1;
+     dreix =dreix+1;
+     dreiy =dreiy-1;
+     vierx =vierx+1;
+     viery = viery+1;
     
-    Ausrichtung ='n';
+     Ausrichtung ='n';
     }
     }
     
-    @Override
-    public void seitlichbewegen(){
-        
-    }
+    
     @Override
     public void aufkommen(){
         

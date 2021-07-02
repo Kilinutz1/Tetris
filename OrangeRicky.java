@@ -27,10 +27,7 @@ public class OrangeRicky extends Bausteine
         
     }
     
-    @Override
-    public void seitlichbewegen(){
-        
-    }
+    
     @Override
     public void aufkommen(){
         
