@@ -1,24 +1,24 @@
 
-public class Teewee extends Bausteine
+public class BlackRicky extends Bausteine
 {
    
-    public Teewee(){  
+    public BlackRicky(){  
      super();
-     Bausteine Teewee;
-     Teewee = new Bausteine();
-     eins.PositionSetzen(12,3);
-     zwei.PositionSetzen(13,3);
-     drei.PositionSetzen(13,2);
+     Bausteine BlackRicky;
+     BlackRicky = new Bausteine();
+     eins.PositionSetzen(12,2);
+     zwei.PositionSetzen(12,3);
+     drei.PositionSetzen(13,3);
      vier.PositionSetzen(14,3);
      einsx = 12;
-     einsy = 3;
+     einsy = 2;
      zweix =13;
      zweiy =3;
      dreix =13;
-     dreiy =2;
+     dreiy =3;
      vierx =14;
      viery = 3;
-     farbewechseln("violett");
+     farbewechseln("schwarz");
      Ausrichtung ='n';
      zeichnen();
     }
