@@ -87,7 +87,7 @@ class QUADER
     /**
      * Ordnet das Element gemäß Ausrichtung und Position so an, dass die Zunge "über das Kästchen raus hängt".
      */
-    private void zeichne()
+    public void zeichne()
     {
         anzeige. setSize (groesse * 2, groesse);
         anzeige. setLocation (x * groesse, y * groesse);

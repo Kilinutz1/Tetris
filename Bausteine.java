@@ -4,16 +4,16 @@ public class Bausteine{
     QUADER zwei;
     QUADER drei;
     QUADER vier;
-    int einsx;
-    int einsy;
-    int zweix;
-    int zweiy;
-    int dreix;
-    int dreiy;
-    int vierx;
-    int viery;
+    int einsx =0;
+    int einsy =0;
+    int zweix =0;
+    int zweiy =0;
+    int dreix =0;
+    int dreiy =0;
+    int vierx =0;
+    int viery =0;
     char Ausrichtung;
-    String farbe;
+    String farbe = "blau";
 
     public Bausteine(){
         eins = new QUADER(einsx,einsy,farbe); 
@@ -27,10 +27,15 @@ public class Bausteine{
     }
 
     public void herunterfallen(){
-    eins.PositionSetzen(einsx, einsy+1);
-    zwei.PositionSetzen(zweix, zweiy+1);
-    drei.PositionSetzen(dreix, dreiy+1);
-    vier.PositionSetzen(vierx, viery+1);
+        eins.PositionSetzen(einsx, einsy+1);
+        zwei.PositionSetzen(zweix, zweiy+1);
+        drei.PositionSetzen(dreix, dreiy+1);
+        vier.PositionSetzen(vierx, viery+1);
+        zeichnen();
+        einsy = einsy +1;
+        zweiy = zweiy +1;
+        dreiy = dreiy +1;
+        viery = viery +1;
     }
 
     public void seitlichbewegen(){
@@ -40,4 +45,10 @@ public class Bausteine{
     public void aufkommen(){
     }
 
+    public void zeichnen(){
+        eins.zeichne();
+        zwei.zeichne();
+        drei.zeichne();
+        vier.zeichne();
+    }
 }
