@@ -1,35 +1,38 @@
 
 public class Smashboy extends Bausteine
 {
-    QUADER lo;
-    QUADER ro;
-    QUADER lu;
-    QUADER ru;
-    public Smashboy()
-    {
-        lo = new QUADER (1,1,"gelb");
-        ro = new QUADER (2,1,"gelb");
-        lu = new QUADER (1,2,"gelb");
-        ru = new QUADER (2,2,"gelb");
+   
+    public Smashboy(){  
+     super();
+     Bausteine Smashboy;
+     Smashboy = new Bausteine();
+     eins.PositionSetzen(12,2);
+     zwei.PositionSetzen(13,2);
+     drei.PositionSetzen(12,3);
+     vier.PositionSetzen(13,3);
+     einsx = 12;
+     einsy = 2;
+     zweix =13;
+     zweiy =2;
+     dreix =12;
+     dreiy =3;
+     vierx =13;
+     viery = 3;
+     farbewechseln("gelb");
+     Ausrichtung ='n';
+     zeichnen();
     }
-
     @Override
     public void drehen(){
-
+        
     }
-
-    @Override
-    public void herunterfallen(){
-
-    }
-
+    
     @Override
     public void seitlichbewegen(){
-
+        
     }
-
     @Override
     public void aufkommen(){
-
+        
     }
 }
