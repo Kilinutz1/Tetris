@@ -18,7 +18,7 @@ public class Smashboy extends Bausteine
      dreiy =3;
      vierx =13;
      viery = 3;
-     farbe= "gelb";
+     farbewechseln("gelb");
      Ausrichtung ='n';
      zeichnen();
     }
