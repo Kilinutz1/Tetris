@@ -18,13 +18,24 @@ public class HERO extends Bausteine
      dreiy =2;
      vierx =15;
      viery = 2;
-     farbe= "blau";
+     farbewechseln("gelb");
      Ausrichtung ='n';
      zeichnen();
     }
     @Override
     public void drehen(){
-        
+    if (Ausrichtung == 'n'){
+     Ausrichtung ='o';
+    }
+    else if (Ausrichtung == 'o'){
+    Ausrichtung ='s';
+    }
+    else if (Ausrichtung == 's'){
+    Ausrichtung ='w';
+    }
+    else if (Ausrichtung == 'w'){
+    
+    Ausrichtung ='n';}
     }
     
     @Override

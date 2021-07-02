@@ -51,4 +51,10 @@ public class Bausteine{
         drei.zeichne();
         vier.zeichne();
     }
+    public void farbewechseln(String farbe){
+    eins.farbeSetzen(farbe);
+    zwei.farbeSetzen(farbe);
+    drei.farbeSetzen(farbe);
+    vier.farbeSetzen(farbe);
+    }
 }

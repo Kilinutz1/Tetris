@@ -67,7 +67,7 @@ class QUADER
      * TODO
      * Die Farbe soll nach einer Eingabe (z.B. String) geändert werden.
      */
-    private void farbeSetzen(String neueFarbe) {
+    public void farbeSetzen(String neueFarbe) {
         //Farben: Color. gefolgt von white, yellow, pink, cyan, blue, green, gray, black, ...
         // mit (new Color (200, 0, 0)) können alle rgb-Farben adressiert werden.
         switch (neueFarbe) {
