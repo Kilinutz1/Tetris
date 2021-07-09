@@ -88,10 +88,7 @@ public class ClevelandZ extends Bausteine
 }
     }
     
-    @Override
-    public void seitlichbewegen(){
-        
-    }
+    
     @Override
     public void aufkommen(){
         
