@@ -46,15 +46,44 @@ public class Spiel extends SIMULATION
     public static void main(String[] args) {
         Spiel s = new Spiel();
     }
-    public int zufallszahl() {
+    private int zufallszahl() {
         int max;
         max = 6;
         return (int) (Math.random()*(max+1));
        }
     public void spawnen(){
-     
-      
-        
+    switch (zufallszahl()){
+    case 0:
+    Teewee x1 = new Teewee();
+    break;
+    
+    case 1:
+    HERO x2 = new HERO(); 
+    break;
+    
+    case 2:
+    OrangeRicky x3 = new OrangeRicky();
+    break;
+    
+    case 3:
+    Smashboy x4 = new Smashboy();
+    break;
+    
+    case 4:
+    RhodeIslandZ x5 = new RhodeIslandZ();
+    break;
+    
+    case 5:
+    BlackRicky x6 = new BlackRicky();
+    break;
+    
+    case 6:
+    ClevelandZ x7 = new ClevelandZ();
+    break;
+    
+    
+    
+    } 
         } 
     }   
 
