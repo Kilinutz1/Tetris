@@ -13,6 +13,7 @@ public class Bausteine{
     int vierx =0;
     int viery =0;
     char Ausrichtung;
+    int[] koordinaten = new int[8];
     String farbe = "blau";
 
     public Bausteine(){
