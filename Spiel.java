@@ -46,7 +46,15 @@ public class Spiel extends SIMULATION
     public static void main(String[] args) {
         Spiel s = new Spiel();
     }
-    public int zufallszahl(int max) {
+    public int zufallszahl() {
+        int max;
+        max = 6;
         return (int) (Math.random()*(max+1));
        }
-}
+    public void spawnen(){
+     
+      
+        
+        } 
+    }   
+
