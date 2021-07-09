@@ -46,4 +46,7 @@ public class Spiel extends SIMULATION
     public static void main(String[] args) {
         Spiel s = new Spiel();
     }
+    public int zufallszahl(int max) {
+        return (int) (Math.random()*(max+1));
+       }
 }
