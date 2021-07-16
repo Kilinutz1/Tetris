@@ -23,29 +23,33 @@ public class Spiel extends SIMULATION
 
     /**
      * Info: Diese Methode wird automatisch nach jeder Zeiteinheit ausgeführt. 
-     * ToDo: Was soll nach jeder Zeiteinheit passieren?
-     */ @Override
-    void TaktImpulsAusfuehren ()
-    {
-        System. out. println ();
-    }
-
-    public void starten(){
-        
-
-    }
-
+     * ToDo: Was soll nach jeder Zeiteinheit passieren
     /**
      * 
      * Info: Diese Methode wird automatisch aufgerufen, sobald eine Taste gedrückt wird.
      * ToDo: Leite den Tastendruck auf die Methode um, die diesen verarbeitet.
-     */ @Override
+     */ 
+    
+    
+      @Override
+    void TaktImpulsAusfuehren ()
+    {
+        x1.herunterfallen();
+    }
+    
+    public void starten1(){
+     Starten();   
+     spawnen();
+     
+    }
+    
+    @Override
     void TasteGedrueckt(char taste)
     {
         switch(taste){
             case 'S':
             case 's':
-            starten();
+            starten1();
             break;
 
             case 'd':
