@@ -12,7 +12,7 @@
 public class Spiel extends SIMULATION
 {
     private RANDSYMBOL rand;
-
+    Bausteine x1;
     /**
      * Constructor for objects of class Spiel
      */
@@ -31,7 +31,7 @@ public class Spiel extends SIMULATION
     }
 
     public void starten(){
-        spawnen();
+        
 
     }
 
@@ -50,18 +50,23 @@ public class Spiel extends SIMULATION
 
             case 'd':
             case 'D':
-            //rechtsbewegen();
+            x1.rechtsbewegen();
             break;
-
+            
             case 'a':
             case 'A':
-            //linksbewegen();
+            x1.linksbewegen();
             break;
             
             
-           // case 'A':
-            //drehen();
-            //break;
+           case 'q':
+           case 'Q':
+            x1.drehen();
+            break;
+             case 'w':
+            case 'W':
+            x1.herunterfallen();
+            break;
         }
 
     }
@@ -79,7 +84,7 @@ public class Spiel extends SIMULATION
     }
 
     public void spawnen(){
-        Bausteine x1;
+        
         switch (zufallszahl()){
             case 0:
             x1 = new Teewee();
