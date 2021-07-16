@@ -81,7 +81,7 @@ public class Spiel extends SIMULATION
     public static void main(String[] args) {
         Spiel s = new Spiel();
     }
-
+//lappen
     private int zufallszahl() {
         int max;
         max = 6;
