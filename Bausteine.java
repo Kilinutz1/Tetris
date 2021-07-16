@@ -1,5 +1,8 @@
 
 public class Bausteine{
+    int Außersterlinkspunkt;
+    int Außersterrechtspunkt;
+    int untersterpunkt;
     QUADER eins;
     QUADER zwei;
     QUADER drei;
@@ -15,7 +18,6 @@ public class Bausteine{
     char Ausrichtung;
     String farbe = "blau";
     private int[][] belegteZellen;
-    
 
     public Bausteine(){
         eins = new QUADER(einsx,einsy,farbe); 
@@ -23,12 +25,14 @@ public class Bausteine{
         drei = new QUADER(dreix,dreiy,farbe);
         vier = new QUADER(vierx,viery,farbe);
     }
-    
+
     public void drehen(){
 
     }
 
     public void herunterfallen(){
+        vergleichenseite();
+        if(untersterpunkt<17){
         eins.PositionSetzen(einsx, einsy+1);
         zwei.PositionSetzen(zweix, zweiy+1);
         drei.PositionSetzen(dreix, dreiy+1);
@@ -39,8 +43,58 @@ public class Bausteine{
         dreiy = dreiy +1;
         viery = viery +1;
     }
+    }
+
+    public void vergleichenseite(){
+        int gx=einsx;
+        int mx= einsx;
+        int gy = einsy;
+        if (gx >= zweix){}
+        else{
+            gx =zweix;    
+        }
+        if (gx >= dreix){}
+        else{
+            gx =dreix;    
+        }
+        if (gx >= vierx){}
+        else{
+            gx =vierx;    
+        }
+
+        if (mx <= zweix){}
+        else{
+            mx =zweix;
+        }
+        if (mx <= dreix){}
+        else{
+            mx =dreix;
+        }
+        if (mx <= vierx){}
+        else{
+            mx =vierx;
+        }
+        
+        if (gy >= zweiy){}
+        else{
+            gy =zweiy;
+        }
+        if (gy >= dreiy){}
+        else{
+            gy =dreiy;
+        }
+        if (gy >= viery){}
+        else{
+            gy =viery;
+        }
+        Außersterlinkspunkt=mx;
+        Außersterrechtspunkt=gx;
+        untersterpunkt =gy;
+    }
 
     public void rechtsbewegen(){
+        vergleichenseite();
+        if(Außersterrechtspunkt<17){
         eins.PositionSetzen(einsx+1, einsy);
         zwei.PositionSetzen(zweix+1, zweiy);
         drei.PositionSetzen(dreix+1, dreiy);
@@ -50,8 +104,14 @@ public class Bausteine{
         zweix = zweix +1;
         dreix = dreix +1;
         vierx = vierx +1; 
+    
     }
+    
+    }
+
     public void linksbewegen(){
+        vergleichenseite();
+        if(Außersterlinkspunkt>8){
         eins.PositionSetzen(einsx-1, einsy);
         zwei.PositionSetzen(zweix-1, zweiy);
         drei.PositionSetzen(dreix-1, dreiy);
@@ -62,6 +122,8 @@ public class Bausteine{
         dreix = dreix -1;
         vierx = vierx -1;
     }
+    }
+
     public void aufkommen(){
     }
 
@@ -71,6 +133,7 @@ public class Bausteine{
         drei.zeichne();
         vier.zeichne();
     }
+
     public void farbewechseln(String farbe){
         eins.farbeSetzen(farbe);
         zwei.farbeSetzen(farbe);
