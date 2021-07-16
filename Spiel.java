@@ -2,6 +2,7 @@
 //Affe
 //Test 
 //Hallo ihr Lappen
+import java.util.*;
 
 /**
  * Diese Klasse steuert das eigentliche Spiel, indem es die Funktionen der anderen Klassen z.B. zum Anzeigen der Graphik nutzt. 
@@ -12,7 +13,7 @@
 public class Spiel extends SIMULATION
 {
     private RANDSYMBOL rand;
-    Bausteine x1;
+    ArrayList<Bausteine> x1 = new ArrayList<Bausteine> ();
     /**
      * Constructor for objects of class Spiel
      */
@@ -34,7 +35,7 @@ public class Spiel extends SIMULATION
       @Override
     void TaktImpulsAusfuehren ()
     {
-        x1.herunterfallen();
+        x1.get(x1.size()-1).herunterfallen();
     }
     
     public void starten1(){
@@ -54,22 +55,22 @@ public class Spiel extends SIMULATION
 
             case 'd':
             case 'D':
-            x1.rechtsbewegen();
+            x1.get(x1.size()-1).rechtsbewegen();
             break;
             
             case 'a':
             case 'A':
-            x1.linksbewegen();
+            x1.get(x1.size()-1).linksbewegen();
             break;
             
             
            case 'q':
            case 'Q':
-            x1.drehen();
+            x1.get(x1.size()-1).drehen();
             break;
              case 'w':
             case 'W':
-            x1.herunterfallen();
+            x1.get(x1.size()-1).herunterfallen();
             break;
         }
 
@@ -91,31 +92,31 @@ public class Spiel extends SIMULATION
         
         switch (zufallszahl()){
             case 0:
-            x1 = new Teewee();
+            x1.add(new Teewee());
             break;
 
             case 1:
-            x1 = new HERO(); 
+            x1.add(new HERO()); 
             break;
 
             case 2:
-            x1 = new OrangeRicky();
+            x1.add(new OrangeRicky());
             break;
 
             case 3:
-            x1 = new Smashboy();
+            x1.add(new Smashboy());
             break;
 
             case 4:
-            x1 = new RhodeIslandZ();
+            x1.add(new RhodeIslandZ());
             break;
 
             case 5:
-            x1 = new BlackRicky();
+            x1.add(new BlackRicky());
             break;
 
             case 6:
-            x1 = new ClevelandZ();
+            x1.add(new ClevelandZ());
             break;
 
         } 
