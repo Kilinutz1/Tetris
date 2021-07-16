@@ -7,6 +7,7 @@ public class Bausteine{
     QUADER zwei;
     QUADER drei;
     QUADER vier;
+    boolean wert;
     int einsx =0;
     int einsy =0;
     int zweix =0;
@@ -32,6 +33,7 @@ public class Bausteine{
 
     public void herunterfallen(){
         vergleichenseite();
+       
         if(untersterpunkt<17){
         eins.PositionSetzen(einsx, einsy+1);
         zwei.PositionSetzen(zweix, zweiy+1);
@@ -43,8 +45,11 @@ public class Bausteine{
         dreiy = dreiy +1;
         viery = viery +1;
     }
+    else{
+    
     }
-
+    }
+   
     public void vergleichenseite(){
         int gx=einsx;
         int mx= einsx;

@@ -33,12 +33,14 @@ public class Spiel extends SIMULATION
     void TaktImpulsAusfuehren ()
     {
         x1.get(x1.size()-1).herunterfallen();
+       
     }
     
     public void starten1(){
      Starten();   
      spawnen();
-     
+    
+        
     }
     
     @Override
