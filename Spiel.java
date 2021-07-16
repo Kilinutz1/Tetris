@@ -1,7 +1,4 @@
-//a
-//Affe
-//Test 
-//Hallo ihr Lappen
+
 import java.util.*;
 
 /**
