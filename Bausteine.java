@@ -14,6 +14,8 @@ public class Bausteine{
     int viery =0;
     char Ausrichtung;
     String farbe = "blau";
+    private int[][] belegteZellen;
+    
 
     public Bausteine(){
         eins = new QUADER(einsx,einsy,farbe); 
@@ -70,9 +72,9 @@ public class Bausteine{
         vier.zeichne();
     }
     public void farbewechseln(String farbe){
-    eins.farbeSetzen(farbe);
-    zwei.farbeSetzen(farbe);
-    drei.farbeSetzen(farbe);
-    vier.farbeSetzen(farbe);
+        eins.farbeSetzen(farbe);
+        zwei.farbeSetzen(farbe);
+        drei.farbeSetzen(farbe);
+        vier.farbeSetzen(farbe);
     }
 }
