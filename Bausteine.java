@@ -1,5 +1,6 @@
 
 public class Bausteine{
+    int cool;
     int Außersterlinkspunkt;
     int Außersterrechtspunkt;
     int untersterpunkt;
@@ -33,7 +34,7 @@ public class Bausteine{
 
     public void herunterfallen(){
         vergleichenseite();
-       
+        cool = 0;
         if(untersterpunkt<17){
         eins.PositionSetzen(einsx, einsy+1);
         zwei.PositionSetzen(zweix, zweiy+1);
@@ -46,7 +47,7 @@ public class Bausteine{
         viery = viery +1;
     }
     else{
-    
+     cool =1;
     }
     }
    

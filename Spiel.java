@@ -33,22 +33,23 @@ public class Spiel extends SIMULATION
     void TaktImpulsAusfuehren ()
     {
         x1.get(x1.size()-1).herunterfallen();
-       
+         while (x1.get(x1.size()-1).cool == 1){
+      spawnen();
+
+    }
     }
     
     public void starten1(){
      Starten();   
      spawnen();
-    
-        
-    }
-    
+     
+}
     @Override
     void TasteGedrueckt(char taste)
     {
         switch(taste){
-            case 'S':
-            case 's':
+            case 'X':
+            case 'x':
             starten1();
             break;
 
@@ -67,8 +68,8 @@ public class Spiel extends SIMULATION
            case 'Q':
             x1.get(x1.size()-1).drehen();
             break;
-             case 'w':
-            case 'W':
+             case 's':
+            case 'S':
             x1.get(x1.size()-1).herunterfallen();
             break;
         }
