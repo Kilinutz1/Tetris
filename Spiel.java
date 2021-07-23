@@ -116,11 +116,9 @@ public class Spiel extends SIMULATION
             case 6:
             x1.add(new ClevelandZ());
             break;
-
+        
         } 
     } 
-    public int ret(){
-    return x1.get(x1.size()-1).einsx;
-    }
+  
 }   
 
