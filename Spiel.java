@@ -119,6 +119,8 @@ public class Spiel extends SIMULATION
 
         } 
     } 
-    
+    public int ret(){
+    return x1.get(x1.size()-1).einsx;
+    }
 }   
 
