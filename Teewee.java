@@ -25,6 +25,7 @@ public class Teewee extends Bausteine
     @Override
     public void drehen(){
         if (Ausrichtung == 'n'){
+         if(kannsichdrehen(1,-1,0,0,1,1,-1,+1)){   
      eins.PositionSetzen(einsx+1,einsy-1);
      zwei.PositionSetzen(zweix,zweiy);
      drei.PositionSetzen(dreix+1,dreiy+1);
@@ -39,7 +40,10 @@ public class Teewee extends Bausteine
      viery = viery+1;
      Ausrichtung ='o';
     }
+    }
+    
     else if (Ausrichtung == 'o'){
+        if(kannsichdrehen(1,1,0,0,-1,1,-1,-1)){
     eins.PositionSetzen(einsx+1,einsy+1);
      zwei.PositionSetzen(zweix ,zweiy);
      drei.PositionSetzen(dreix-1,dreiy+1);
@@ -53,8 +57,10 @@ public class Teewee extends Bausteine
      vierx =vierx-1;
      viery = viery-1;
     Ausrichtung ='s';
+}
     }
     else if (Ausrichtung == 's'){
+        if(kannsichdrehen(-1,1,0,0,-1,-1,+1,-1)){
      eins.PositionSetzen(einsx-1,einsy+1);
      zwei.PositionSetzen(zweix,zweiy);
      drei.PositionSetzen(dreix-1,dreiy-1);
@@ -68,9 +74,10 @@ public class Teewee extends Bausteine
      vierx =vierx+1;
      viery = viery-1;
     Ausrichtung ='w';
-    
+}
     }
     else if (Ausrichtung == 'w'){
+        if(kannsichdrehen(-1,-1,0,0,1,-1,1,+1)){
      eins.PositionSetzen(einsx-1,einsy-1);
      zwei.PositionSetzen(zweix ,zweiy);
      drei.PositionSetzen(dreix+1,dreiy-1);
@@ -85,6 +92,7 @@ public class Teewee extends Bausteine
      viery = viery+1;
     
      Ausrichtung ='n';
+    }
     }
     }
     

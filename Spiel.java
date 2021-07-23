@@ -43,11 +43,97 @@ public class Spiel extends SIMULATION
     public void starten1(){
         Starten();   
         spawnen();
+       
+    }
+    
+    public boolean hatPlatznachrechts(){
+        boolean hatPlatznachrechts = true;
+        for(int i = 0; i< x1.size()-1; i++){
+            if(!((x1.get(x1.size()-1).einsx+1 == (x1.get(i).einsx)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).einsy))) &&
+               !((x1.get(x1.size()-1).zweix+1 == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).einsy))) &&
+               !((x1.get(x1.size()-1).dreix+1 == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).einsy))) &&
+               !((x1.get(x1.size()-1).vierx+1 == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).einsy)))&&
+              (!((x1.get(x1.size()-1).einsx+1 == (x1.get(i).zweix)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).zweiy))) &&
+               !((x1.get(x1.size()-1).zweix+1 == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).zweiy))) &&
+               !((x1.get(x1.size()-1).dreix+1 == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).zweiy))) &&
+               !((x1.get(x1.size()-1).vierx+1 == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).zweiy))))&&
+               (!((x1.get(x1.size()-1).einsx+1 == (x1.get(i).dreix)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).dreiy))) &&
+               !((x1.get(x1.size()-1).zweix+1 == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).dreiy))) &&
+               !((x1.get(x1.size()-1).dreix+1 == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).dreiy))) &&
+               !((x1.get(x1.size()-1).vierx+1 == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).dreiy))))&&
+               (!((x1.get(x1.size()-1).einsx+1 == (x1.get(i).vierx)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).viery))) &&
+               !((x1.get(x1.size()-1).zweix+1 == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).viery))) &&
+               !((x1.get(x1.size()-1).dreix+1 == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).viery))) &&
+               !((x1.get(x1.size()-1).vierx+1 == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).viery)))))
+               {}
+            else{
+               hatPlatznachrechts = false;
+            }
+        }
+        return hatPlatznachrechts;
+    }
+    
+    public boolean hatPlatznachlinks(){
+        boolean hatPlatznachlinks = true;
+        for(int i = 0; i< x1.size()-1; i++){
+            if(!((x1.get(x1.size()-1).einsx-1 == (x1.get(i).einsx)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).einsy))) &&
+               !((x1.get(x1.size()-1).zweix-1 == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).einsy))) &&
+               !((x1.get(x1.size()-1).dreix-1 == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).einsy))) &&
+               !((x1.get(x1.size()-1).vierx-1 == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).einsy)))&&
+              (!((x1.get(x1.size()-1).einsx-1 == (x1.get(i).zweix)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).zweiy))) &&
+               !((x1.get(x1.size()-1).zweix-1 == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).zweiy))) &&
+               !((x1.get(x1.size()-1).dreix-1 == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).zweiy))) &&
+               !((x1.get(x1.size()-1).vierx-1 == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).zweiy))))&&
+               (!((x1.get(x1.size()-1).einsx-1 == (x1.get(i).dreix)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).dreiy))) &&
+               !((x1.get(x1.size()-1).zweix-1 == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).dreiy))) &&
+               !((x1.get(x1.size()-1).dreix-1 == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).dreiy))) &&
+               !((x1.get(x1.size()-1).vierx-1 == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).dreiy))))&&
+               (!((x1.get(x1.size()-1).einsx-1 == (x1.get(i).vierx)) &&
+            (x1.get(x1.size()-1).einsy == (x1.get(i).viery))) &&
+               !((x1.get(x1.size()-1).zweix-1 == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).zweiy == (x1.get(i).viery))) &&
+               !((x1.get(x1.size()-1).dreix-1 == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).dreiy == (x1.get(i).viery))) &&
+               !((x1.get(x1.size()-1).vierx-1 == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).viery == (x1.get(i).viery)))))
+               {}
+            else{
+               hatPlatznachlinks = false;
+            }
+        }
+        return hatPlatznachlinks;
     }
     
     public boolean hatPlatznachunten(){
         boolean hatPlatznachunten = true;
-        
         for(int i = 0; i< x1.size()-1; i++){
             if(!((x1.get(x1.size()-1).einsx == (x1.get(i).einsx)) &&
             (x1.get(x1.size()-1).einsy+1 == (x1.get(i).einsy))) &&
@@ -67,39 +153,25 @@ public class Spiel extends SIMULATION
                (x1.get(x1.size()-1).viery+1 == (x1.get(i).zweiy))))&&
                (!((x1.get(x1.size()-1).einsx == (x1.get(i).dreix)) &&
             (x1.get(x1.size()-1).einsy+1 == (x1.get(i).dreiy))) &&
-            
                !((x1.get(x1.size()-1).zweix == (x1.get(i).dreix)) &&
                (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).dreiy))) &&
-               
                !((x1.get(x1.size()-1).dreix == (x1.get(i).dreix)) &&
                (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).dreiy))) &&
-               
                !((x1.get(x1.size()-1).vierx == (x1.get(i).dreix)) &&
                (x1.get(x1.size()-1).viery+1 == (x1.get(i).dreiy))))&&
-               
-               
-               
-               
                (!((x1.get(x1.size()-1).einsx == (x1.get(i).vierx)) &&
             (x1.get(x1.size()-1).einsy+1 == (x1.get(i).viery))) &&
-            
                !((x1.get(x1.size()-1).zweix == (x1.get(i).vierx)) &&
                (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).viery))) &&
-               
                !((x1.get(x1.size()-1).dreix == (x1.get(i).vierx)) &&
                (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).viery))) &&
-               
                !((x1.get(x1.size()-1).vierx == (x1.get(i).vierx)) &&
                (x1.get(x1.size()-1).viery+1 == (x1.get(i).viery)))))
-               
-               {
-           
-            }
+               {}
             else{
-            hatPlatznachunten = false;
+               hatPlatznachunten = false;
             }
         }
-        
         return hatPlatznachunten;
     }
 

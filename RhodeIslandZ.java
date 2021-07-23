@@ -22,10 +22,11 @@ public class RhodeIslandZ extends Bausteine
         Ausrichtung ='n';
         zeichnen();
     }
-
+   
     @Override
     public void drehen(){
         if (Ausrichtung == 'n'){
+            if(kannsichdrehen(0,-2,-1,-1,0,0,-1,+1)){
             eins.PositionSetzen(einsx,einsy-2);
             zwei.PositionSetzen(zweix-1,zweiy-1);
             drei.PositionSetzen(dreix,dreiy);
@@ -40,7 +41,9 @@ public class RhodeIslandZ extends Bausteine
             viery = viery+1;
             Ausrichtung ='o';
         }
+        }
         else if (Ausrichtung == 'o'){
+            if(kannsichdrehen(2,0,1,-1,0,0,-1,-1)){
             eins.PositionSetzen(einsx+2,einsy);
             zwei.PositionSetzen(zweix+1 ,zweiy-1);
             drei.PositionSetzen(dreix,dreiy);
@@ -54,8 +57,11 @@ public class RhodeIslandZ extends Bausteine
             vierx =vierx-1;
             viery = viery-1;
             Ausrichtung ='s';
+        
+        }
         }
         else if (Ausrichtung == 's'){
+            if(kannsichdrehen(0,2,1,1,0,0,1,-1)){
             eins.PositionSetzen(einsx,einsy+2);
             zwei.PositionSetzen(zweix+1,zweiy+1);
             drei.PositionSetzen(dreix,dreiy);
@@ -69,9 +75,10 @@ public class RhodeIslandZ extends Bausteine
             vierx =vierx+1;
             viery = viery-1;
             Ausrichtung ='w';
-
+        }
         }
         else if (Ausrichtung == 'w'){
+            if (kannsichdrehen(-2,0,-1,1,0,0,1,1)){
             eins.PositionSetzen(einsx-2,einsy);
             zwei.PositionSetzen(zweix-1 ,zweiy+1);
             drei.PositionSetzen(dreix,dreiy);
@@ -86,6 +93,7 @@ public class RhodeIslandZ extends Bausteine
             viery = viery+1;
 
             Ausrichtung ='n';
+        }
         }   
     }
 
