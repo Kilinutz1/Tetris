@@ -42,6 +42,29 @@ public class Spiel extends SIMULATION
         Starten();   
         spawnen();
     }
+    
+    public boolean hatPlatz(){
+        boolean hatPlatz = true;
+        
+        for(int i = 0; i< x1.size()-1; i++){
+            if((x1.get(x1.size()-1).einsx != (x1.get(i).einsx)) && 
+               (x1.get(x1.size()-1).zweix != (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).dreix != (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).vierx != (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).einsy != (x1.get(i).einsy)) &&
+               (x1.get(x1.size()-1).zweiy != (x1.get(i).zweiy)) &&
+               (x1.get(x1.size()-1).dreiy != (x1.get(i).dreiy)) &&
+               (x1.get(x1.size()-1).viery != (x1.get(i).viery)) 
+            ){
+           
+            }
+            else{
+            hatPlatz = false;
+            }
+        }
+        
+        return hatPlatz;
+    }
 
     @Override
     void TasteGedrueckt(char taste)
