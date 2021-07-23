@@ -34,7 +34,11 @@ public class Bausteine{
 
     public void herunterfallen(){
         vergleichenseite();
+<<<<<<< HEAD
 
+=======
+        cool = 0;
+>>>>>>> 9c3c8c8adefdfc8e24f0362c3ef3f771fea44a1d
         if(untersterpunkt<17){
         eins.PositionSetzen(einsx, einsy+1);
         zwei.PositionSetzen(zweix, zweiy+1);
