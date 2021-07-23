@@ -33,7 +33,7 @@ public class Bausteine{
     }
 
     public void herunterfallen(){
-        vergleichenseite();
+        vergleichenseite(); 
 
         if(untersterpunkt<17){
         eins.PositionSetzen(einsx, einsy+1);
@@ -51,6 +51,7 @@ public class Bausteine{
        }
     }
    
+
     public void vergleichenseite(){
         int gx=einsx;
         int mx= einsx;
