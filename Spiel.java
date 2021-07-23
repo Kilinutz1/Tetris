@@ -10,7 +10,7 @@ import java.util.*;
 public class Spiel extends SIMULATION
 {
     private RANDSYMBOL rand;
-    ArrayList<Bausteine> x1 = new ArrayList<Bausteine> ();
+   public ArrayList<Bausteine> x1 = new ArrayList<Bausteine> ();
     /**
      * Constructor for objects of class Spiel
      */
@@ -119,5 +119,6 @@ public class Spiel extends SIMULATION
 
         } 
     } 
+    
 }   
 
