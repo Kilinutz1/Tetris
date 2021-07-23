@@ -25,6 +25,8 @@ public class ClevelandZ extends Bausteine
     @Override
     public void drehen(){
     if (Ausrichtung == 'n'){
+     kannsichdrehen(1,-1,0,0,-1,-1,-2,0);
+            if(kannsichdrehn){
      eins.PositionSetzen(einsx+1,einsy-1);
      zwei.PositionSetzen(zweix ,zweiy);
      drei.PositionSetzen(dreix-1,dreiy-1);
@@ -39,7 +41,10 @@ public class ClevelandZ extends Bausteine
      viery = viery;
      Ausrichtung ='o';
     }
+    }
     else if (Ausrichtung == 'o'){
+        kannsichdrehen(1,1,0,0,1,-1,0,-2);
+            if(kannsichdrehn){
     eins.PositionSetzen(einsx+1,einsy+1);
      zwei.PositionSetzen(zweix ,zweiy);
      drei.PositionSetzen(dreix+1,dreiy-1);
@@ -53,8 +58,11 @@ public class ClevelandZ extends Bausteine
      vierx =vierx;
      viery = viery-2;
     Ausrichtung ='s';
+}
     }
     else if (Ausrichtung == 's'){
+        kannsichdrehen(-1,1,0,0,1,1,2,0);
+            if(kannsichdrehn){
      eins.PositionSetzen(einsx-1,einsy+1);
      zwei.PositionSetzen(zweix,zweiy);
      drei.PositionSetzen(dreix+1,dreiy+1);
@@ -68,9 +76,11 @@ public class ClevelandZ extends Bausteine
      vierx =vierx+2;
      viery = viery;
     Ausrichtung ='w';
-    
+}
     }
     else if (Ausrichtung == 'w'){
+        kannsichdrehen(-1,-1,0,0,-1,1,0,2);
+            if(kannsichdrehn){
     eins.PositionSetzen(einsx-1,einsy-1);
      zwei.PositionSetzen(zweix ,zweiy);
      drei.PositionSetzen(dreix-1,dreiy+1);
@@ -85,6 +95,7 @@ public class ClevelandZ extends Bausteine
      viery = viery+2;
     
     Ausrichtung ='n';
+}
 }
     }
     

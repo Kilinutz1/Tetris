@@ -26,7 +26,8 @@ public class RhodeIslandZ extends Bausteine
     @Override
     public void drehen(){
         if (Ausrichtung == 'n'){
-            if(kannsichdrehen(0,-2,-1,-1,0,0,-1,+1)){
+            kannsichdrehen(0,-2,-1,-1,0,0,-1,+1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx,einsy-2);
             zwei.PositionSetzen(zweix-1,zweiy-1);
             drei.PositionSetzen(dreix,dreiy);
@@ -43,7 +44,8 @@ public class RhodeIslandZ extends Bausteine
         }
         }
         else if (Ausrichtung == 'o'){
-            if(kannsichdrehen(2,0,1,-1,0,0,-1,-1)){
+            kannsichdrehen(2,0,1,-1,0,0,-1,-1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx+2,einsy);
             zwei.PositionSetzen(zweix+1 ,zweiy-1);
             drei.PositionSetzen(dreix,dreiy);
@@ -61,7 +63,8 @@ public class RhodeIslandZ extends Bausteine
         }
         }
         else if (Ausrichtung == 's'){
-            if(kannsichdrehen(0,2,1,1,0,0,1,-1)){
+            kannsichdrehen(0,2,1,1,0,0,1,-1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx,einsy+2);
             zwei.PositionSetzen(zweix+1,zweiy+1);
             drei.PositionSetzen(dreix,dreiy);
@@ -78,7 +81,8 @@ public class RhodeIslandZ extends Bausteine
         }
         }
         else if (Ausrichtung == 'w'){
-            if (kannsichdrehen(-2,0,-1,1,0,0,1,1)){
+            kannsichdrehen(-2,0,-1,1,0,0,1,1);
+            if (kannsichdrehn){
             eins.PositionSetzen(einsx-2,einsy);
             zwei.PositionSetzen(zweix-1 ,zweiy+1);
             drei.PositionSetzen(dreix,dreiy);

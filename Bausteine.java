@@ -24,7 +24,7 @@ public class Bausteine{
     char Ausrichtung;
     String farbe = "blau";
     private int[][] belegteZellen;
-
+    boolean kannsichdrehn;
     public Bausteine(Spiel neuesSpiel){
         s= neuesSpiel;
         eins = new QUADER(einsx,einsy,farbe); 
@@ -202,9 +202,9 @@ public class Bausteine{
     }
 
     public boolean kannsichdrehen(int vx1, int vy1,int vx2, int vy2, int vx3, int vy3, int vx4, int vy4){
-        boolean kannsichdrehen = true;
+        kannsichdrehn = true;
         vergleichenseite2(vx1,vy1,vx2,vy2,vx3, vy3, vx4,vy4);
-        if(Außersterlinkspunkt2>9 && Außersterrechtspunkt2<17 && untersterpunkt2<16){
+        if(Außersterlinkspunkt2>7 && Außersterrechtspunkt2<18 && untersterpunkt2<17){
             for(int i = 0; i< s.x1.size()-1; i++){
                 if(
                 !((s.x1.get(s.x1.size()-1).einsx+vx1 == (s.x1.get(i).einsx)) &&
@@ -246,10 +246,13 @@ public class Bausteine{
                 )
                 {}
                 else{
-                    kannsichdrehen = false;
+                    kannsichdrehn = false;
                 }
             }
         }
-        return kannsichdrehen;
+        else{
+        kannsichdrehn =false;
+        }
+        return kannsichdrehn;
     }
 }

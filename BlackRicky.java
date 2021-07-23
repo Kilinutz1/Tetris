@@ -25,6 +25,8 @@ public class BlackRicky extends Bausteine
     @Override
     public void drehen(){
      if (Ausrichtung == 'n'){
+            kannsichdrehen(2,0,1,-1,0,0,-1,1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx+2,einsy);
             zwei.PositionSetzen(zweix+1,zweiy-1);
             drei.PositionSetzen(dreix,dreiy);
@@ -39,7 +41,10 @@ public class BlackRicky extends Bausteine
             viery = viery+1;
             Ausrichtung ='o';
         }
+        }
         else if (Ausrichtung == 'o'){
+            kannsichdrehen(0,2,1,1,0,0,-1,-1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx,einsy+2);
             zwei.PositionSetzen(zweix+1 ,zweiy+1);
             drei.PositionSetzen(dreix,dreiy);
@@ -54,7 +59,10 @@ public class BlackRicky extends Bausteine
             viery = viery-1;
             Ausrichtung ='s';
         }
+        }
         else if (Ausrichtung == 's'){
+            kannsichdrehen(-2,0,-1,1,0,0,1,-1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx-2,einsy);
             zwei.PositionSetzen(zweix-1,zweiy+1);
             drei.PositionSetzen(dreix,dreiy);
@@ -68,9 +76,11 @@ public class BlackRicky extends Bausteine
             vierx =vierx+1;
             viery = viery-1;
             Ausrichtung ='w';
-
+        }
         }
         else if (Ausrichtung == 'w'){
+            kannsichdrehen(0,-2,-1,-1,0,0,1,1);
+            if(kannsichdrehn){
             eins.PositionSetzen(einsx,einsy-2);
             zwei.PositionSetzen(zweix-1 ,zweiy-1);
             drei.PositionSetzen(dreix,dreiy);
@@ -85,6 +95,7 @@ public class BlackRicky extends Bausteine
             viery = viery+1;
 
             Ausrichtung ='n';
+        }
         }      
     }
     
