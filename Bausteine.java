@@ -45,10 +45,10 @@ public class Bausteine{
         zweiy = zweiy +1;
         dreiy = dreiy +1;
         viery = viery +1;
-    }
-    else{
-     cool =1;
-    }
+       }
+        else{
+        cool =1;
+       }
     }
    
     public void vergleichenseite(){

@@ -27,23 +27,22 @@ public class Spiel extends SIMULATION
      * Info: Diese Methode wird automatisch aufgerufen, sobald eine Taste gedrückt wird.
      * ToDo: Leite den Tastendruck auf die Methode um, die diesen verarbeitet.
      */ 
-    
-    
-      @Override
+
+    @Override
     void TaktImpulsAusfuehren ()
     {
         x1.get(x1.size()-1).herunterfallen();
-         while (x1.get(x1.size()-1).cool == 1){
-      spawnen();
+        while (x1.get(x1.size()-1).cool == 1){
+            spawnen();
 
+        }
     }
-    }
-    
+
     public void starten1(){
-     Starten();   
-     spawnen();
-     
-}
+        Starten();   
+        spawnen();
+    }
+
     @Override
     void TasteGedrueckt(char taste)
     {
@@ -57,18 +56,17 @@ public class Spiel extends SIMULATION
             case 'D':
             x1.get(x1.size()-1).rechtsbewegen();
             break;
-            
+
             case 'a':
             case 'A':
             x1.get(x1.size()-1).linksbewegen();
             break;
-            
-            
-           case 'q':
-           case 'Q':
+
+            case 'q':
+            case 'Q':
             x1.get(x1.size()-1).drehen();
             break;
-             case 's':
+            case 's':
             case 'S':
             x1.get(x1.size()-1).herunterfallen();
             break;
@@ -81,7 +79,7 @@ public class Spiel extends SIMULATION
     public static void main(String[] args) {
         Spiel s = new Spiel();
     }
-//lappen
+    //lappen
     private int zufallszahl() {
         int max;
         max = 6;
@@ -89,7 +87,7 @@ public class Spiel extends SIMULATION
     }
 
     public void spawnen(){
-        
+
         switch (zufallszahl()){
             case 0:
             x1.add(new Teewee());
