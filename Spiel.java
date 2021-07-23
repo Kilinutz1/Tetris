@@ -1,4 +1,5 @@
 
+
 import java.util.*;
 
 /**
@@ -9,6 +10,7 @@ import java.util.*;
  */
 public class Spiel extends SIMULATION
 {
+   
     private RANDSYMBOL rand;
    public ArrayList<Bausteine> x1 = new ArrayList<Bausteine> ();
     /**
@@ -34,7 +36,7 @@ public class Spiel extends SIMULATION
         x1.get(x1.size()-1).herunterfallen();
         while (x1.get(x1.size()-1).cool == 1){
             spawnen();
-
+           x1.get(x1.size()-2).cool =0;
         }
     }
 
@@ -43,27 +45,75 @@ public class Spiel extends SIMULATION
         spawnen();
     }
     
-    public boolean hatPlatz(){
-        boolean hatPlatz = true;
+    public boolean hatPlatznachunten(){
+        boolean hatPlatznachunten = true;
         
         for(int i = 0; i< x1.size()-1; i++){
-            if((x1.get(x1.size()-1).einsx != (x1.get(i).einsx)) && 
-               (x1.get(x1.size()-1).zweix != (x1.get(i).zweix)) &&
-               (x1.get(x1.size()-1).dreix != (x1.get(i).dreix)) &&
-               (x1.get(x1.size()-1).vierx != (x1.get(i).vierx)) &&
-               (x1.get(x1.size()-1).einsy != (x1.get(i).einsy)) &&
-               (x1.get(x1.size()-1).zweiy != (x1.get(i).zweiy)) &&
-               (x1.get(x1.size()-1).dreiy != (x1.get(i).dreiy)) &&
-               (x1.get(x1.size()-1).viery != (x1.get(i).viery)) 
-            ){
+            if(!((x1.get(x1.size()-1).einsx == (x1.get(i).einsx)) &&
+            (x1.get(x1.size()-1).einsy+1 == (x1.get(i).einsy))) &&
+            
+               !((x1.get(x1.size()-1).zweix == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).einsy))) &&
+               
+               !((x1.get(x1.size()-1).dreix == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).einsy))) &&
+               
+               !((x1.get(x1.size()-1).vierx == (x1.get(i).einsx)) &&
+               (x1.get(x1.size()-1).viery+1 == (x1.get(i).einsy)))&&
+               
+               
+               
+               
+              (!((x1.get(x1.size()-1).einsx == (x1.get(i).zweix)) &&
+            (x1.get(x1.size()-1).einsy+1 == (x1.get(i).zweiy))) &&
+            
+               !((x1.get(x1.size()-1).zweix == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).zweiy))) &&
+               
+               !((x1.get(x1.size()-1).dreix == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).zweiy))) &&
+               
+               !((x1.get(x1.size()-1).vierx == (x1.get(i).zweix)) &&
+               (x1.get(x1.size()-1).viery+1 == (x1.get(i).zweiy))))&&
+               
+               
+               
+               (!((x1.get(x1.size()-1).einsx == (x1.get(i).dreix)) &&
+            (x1.get(x1.size()-1).einsy+1 == (x1.get(i).dreiy))) &&
+            
+               !((x1.get(x1.size()-1).zweix == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).dreiy))) &&
+               
+               !((x1.get(x1.size()-1).dreix == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).dreiy))) &&
+               
+               !((x1.get(x1.size()-1).vierx == (x1.get(i).dreix)) &&
+               (x1.get(x1.size()-1).viery+1 == (x1.get(i).dreiy))))&&
+               
+               
+               
+               
+               (!((x1.get(x1.size()-1).einsx == (x1.get(i).vierx)) &&
+            (x1.get(x1.size()-1).einsy+1 == (x1.get(i).viery))) &&
+            
+               !((x1.get(x1.size()-1).zweix == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).viery))) &&
+               
+               !((x1.get(x1.size()-1).dreix == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).viery))) &&
+               
+               !((x1.get(x1.size()-1).vierx == (x1.get(i).vierx)) &&
+               (x1.get(x1.size()-1).viery+1 == (x1.get(i).viery)))))
+               
+               {
            
             }
             else{
-            hatPlatz = false;
+            hatPlatznachunten = false;
             }
         }
         
-        return hatPlatz;
+        return hatPlatznachunten;
     }
 
     @Override
@@ -110,34 +160,34 @@ public class Spiel extends SIMULATION
     }
 
     public void spawnen(){
-
+  
         switch (zufallszahl()){
             case 0:
-            x1.add(new Teewee());
+            x1.add(new Teewee(this));
             break;
 
             case 1:
-            x1.add(new HERO()); 
+            x1.add(new HERO(this)); 
             break;
 
             case 2:
-            x1.add(new OrangeRicky());
+            x1.add(new OrangeRicky(this));
             break;
 
             case 3:
-            x1.add(new Smashboy());
+            x1.add(new Smashboy(this));
             break;
 
             case 4:
-            x1.add(new RhodeIslandZ());
+            x1.add(new RhodeIslandZ(this));
             break;
 
             case 5:
-            x1.add(new BlackRicky());
+            x1.add(new BlackRicky(this));
             break;
 
             case 6:
-            x1.add(new ClevelandZ());
+            x1.add(new ClevelandZ(this));
             break;
         
         } 

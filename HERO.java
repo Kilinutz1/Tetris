@@ -2,10 +2,10 @@
 public class HERO extends Bausteine
 {
    
-    public HERO(){  
-     super();
+    public HERO(Spiel neuesSpiel){  
+     super(neuesSpiel);
      Bausteine HERO;
-     HERO = new Bausteine();
+     HERO = new Bausteine(neuesSpiel);
      eins.PositionSetzen(12,2);
      zwei.PositionSetzen(13,2);
      drei.PositionSetzen(14,2);

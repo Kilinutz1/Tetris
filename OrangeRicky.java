@@ -2,10 +2,10 @@
 public class OrangeRicky extends Bausteine
 {
    
-    public OrangeRicky(){  
-     super();
+    public OrangeRicky(Spiel neuesSpiel){  
+     super(neuesSpiel);
      Bausteine OrangeRicky;
-     OrangeRicky = new Bausteine();
+     OrangeRicky = new Bausteine(neuesSpiel);
      eins.PositionSetzen(12,3);
      zwei.PositionSetzen(13,3);
      drei.PositionSetzen(14,3);

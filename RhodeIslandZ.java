@@ -2,10 +2,10 @@
 public class RhodeIslandZ extends Bausteine
 {
 
-    public RhodeIslandZ(){  
-        super();
+    public RhodeIslandZ(Spiel neuesSpiel){  
+        super(neuesSpiel);
         Bausteine RhodeIslandZ;
-        RhodeIslandZ = new Bausteine();
+        RhodeIslandZ = new Bausteine(neuesSpiel);
         eins.PositionSetzen(12,3);
         zwei.PositionSetzen(13,3);
         drei.PositionSetzen(13,2);

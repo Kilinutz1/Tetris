@@ -2,10 +2,10 @@
 public class ClevelandZ extends Bausteine
 {
    
-    public ClevelandZ(){  
-     super();
+    public ClevelandZ(Spiel neuesSpiel){  
+     super(neuesSpiel);
      Bausteine ClevelandZ;
-     ClevelandZ = new Bausteine();
+     ClevelandZ = new Bausteine(neuesSpiel);
      eins.PositionSetzen(12,2);
      zwei.PositionSetzen(13,2);
      drei.PositionSetzen(13,3);

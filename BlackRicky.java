@@ -2,10 +2,10 @@
 public class BlackRicky extends Bausteine
 {
    
-    public BlackRicky(){  
-     super();
+    public BlackRicky(Spiel neuesSpiel){  
+     super(neuesSpiel);
      Bausteine BlackRicky;
-     BlackRicky = new Bausteine();
+     BlackRicky = new Bausteine(neuesSpiel);
      eins.PositionSetzen(12,2);
      zwei.PositionSetzen(12,3);
      drei.PositionSetzen(13,3);

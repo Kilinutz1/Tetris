@@ -2,10 +2,10 @@
 public class Smashboy extends Bausteine
 {
    
-    public Smashboy(){  
-     super();
+    public Smashboy(Spiel neuesSpiel){  
+     super(neuesSpiel);
      Bausteine Smashboy;
-     Smashboy = new Bausteine();
+     Smashboy = new Bausteine(neuesSpiel);
      eins.PositionSetzen(12,2);
      zwei.PositionSetzen(13,2);
      drei.PositionSetzen(12,3);

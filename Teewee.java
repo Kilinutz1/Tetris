@@ -2,10 +2,10 @@
 public class Teewee extends Bausteine
 {
    
-    public Teewee(){  
-     super();
+    public Teewee(Spiel neuesSpiel){  
+     super(neuesSpiel);
      Bausteine Teewee;
-     Teewee = new Bausteine();
+     Teewee = new Bausteine(neuesSpiel);
      eins.PositionSetzen(12,3);
      zwei.PositionSetzen(13,3);
      drei.PositionSetzen(13,2);

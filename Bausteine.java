@@ -6,6 +6,7 @@ public class Bausteine{
     int untersterpunkt;
     QUADER eins;
     QUADER zwei;
+    Spiel s;
     QUADER drei;
     QUADER vier;
     boolean wert;
@@ -21,7 +22,8 @@ public class Bausteine{
     String farbe = "blau";
     private int[][] belegteZellen;
 
-    public Bausteine(){
+    public Bausteine(Spiel neuesSpiel){
+        s= neuesSpiel;
         eins = new QUADER(einsx,einsy,farbe); 
         zwei = new QUADER(zweix,zweiy,farbe);
         drei = new QUADER(dreix,dreiy,farbe);
@@ -33,21 +35,24 @@ public class Bausteine{
     }
 
     public void herunterfallen(){
+      
+        
         vergleichenseite(); 
-
-        if(untersterpunkt<17){
+        if(untersterpunkt<17 && s.hatPlatznachunten()){
         eins.PositionSetzen(einsx, einsy+1);
         zwei.PositionSetzen(zweix, zweiy+1);
         drei.PositionSetzen(dreix, dreiy+1);
         vier.PositionSetzen(vierx, viery+1);
-        zeichnen();
         einsy = einsy +1;
         zweiy = zweiy +1;
         dreiy = dreiy +1;
         viery = viery +1;
+        zeichnen();
+       
        }
         else{
         cool =1;
+      
        }
     }
    
