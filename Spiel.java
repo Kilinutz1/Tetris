@@ -51,33 +51,20 @@ public class Spiel extends SIMULATION
         for(int i = 0; i< x1.size()-1; i++){
             if(!((x1.get(x1.size()-1).einsx == (x1.get(i).einsx)) &&
             (x1.get(x1.size()-1).einsy+1 == (x1.get(i).einsy))) &&
-            
                !((x1.get(x1.size()-1).zweix == (x1.get(i).einsx)) &&
                (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).einsy))) &&
-               
                !((x1.get(x1.size()-1).dreix == (x1.get(i).einsx)) &&
                (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).einsy))) &&
-               
                !((x1.get(x1.size()-1).vierx == (x1.get(i).einsx)) &&
                (x1.get(x1.size()-1).viery+1 == (x1.get(i).einsy)))&&
-               
-               
-               
-               
               (!((x1.get(x1.size()-1).einsx == (x1.get(i).zweix)) &&
             (x1.get(x1.size()-1).einsy+1 == (x1.get(i).zweiy))) &&
-            
                !((x1.get(x1.size()-1).zweix == (x1.get(i).zweix)) &&
                (x1.get(x1.size()-1).zweiy+1 == (x1.get(i).zweiy))) &&
-               
                !((x1.get(x1.size()-1).dreix == (x1.get(i).zweix)) &&
                (x1.get(x1.size()-1).dreiy+1 == (x1.get(i).zweiy))) &&
-               
                !((x1.get(x1.size()-1).vierx == (x1.get(i).zweix)) &&
                (x1.get(x1.size()-1).viery+1 == (x1.get(i).zweiy))))&&
-               
-               
-               
                (!((x1.get(x1.size()-1).einsx == (x1.get(i).dreix)) &&
             (x1.get(x1.size()-1).einsy+1 == (x1.get(i).dreiy))) &&
             
